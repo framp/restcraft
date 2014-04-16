@@ -1,5 +1,6 @@
 var restcraft = require('../..');
 var model = require('../models/complex-toy').restcraft.middleware;
+var fruitModel = require('../models/fruit').restcraft.middleware;
 
 var fruitController = require('./fruit');
 
@@ -7,6 +8,7 @@ var controller = restcraft('complex-toy', {
   parent: fruitController
 });
 
+controller.index(fruitModel.show());
 controller.index(model.index());
 controller.new(model.new());
 controller.create(model.create());
