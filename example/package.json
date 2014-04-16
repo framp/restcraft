@@ -1,0 +1,8 @@
+{
+  "name": "restcraft-example",
+  "version": "0.0.1",
+  "description": "restcraft example",
+  "dependencies": {
+    "mongoose": "^3.8.8"
+  }
+}
