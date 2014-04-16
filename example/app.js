@@ -6,11 +6,12 @@ mongoose.set('debug', true);
 
 var app = express();
 
-
 app.get('/', function(req, res){
   res.send('hello world');
 });
-require('./controllers/fruit')(app);
+require('./controllers/fruit').route()(app);
+require('./controllers/complex-toy').route()(app);
+
 
 app.use(function(req, res, next){
   res.send(res.restcraft);

@@ -4,8 +4,8 @@ var Schema = mongoose.Schema, ObjectId = Schema.ObjectId;
 
 var schema = new Schema({
   name: String,
-  weight: Number
+  movingParts: Number
 });
 
-module.exports = mongoose.model('fruit', schema);
+module.exports = mongoose.model('complex-toy', schema);
 restcraft(module.exports, 'mongoose');
