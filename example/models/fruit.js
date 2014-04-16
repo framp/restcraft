@@ -1,8 +1,6 @@
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/restcraft-example');
-mongoose.set('debug', true);
 
-var restcraft = require('../../lib/resource');
+var restcraft = require('../..').resource;
 var Schema = mongoose.Schema, ObjectId = Schema.ObjectId;
 
 var schema = new Schema({
@@ -10,6 +8,5 @@ var schema = new Schema({
   weight: Number
 });
 
-var model = mongoose.model('Fruit', schema);
-restcraft(model, 'mongoose');
-module.exports = model;
+module.exports = mongoose.model('Fruit', schema);
+restcraft(module.exports, 'mongoose');
