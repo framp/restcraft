@@ -1,14 +1,14 @@
 var restcraft = require('../..');
-var model = require('../models/fruit').restcraft.middleware;
+var fruit = require('../models/fruit').restcraft.middleware;
 
 var controller = restcraft('fruit');
 
-controller.index(model.index());
-controller.new(model.new());
-controller.create(model.create());
-controller.show(model.show());
-controller.edit(model.edit());
-controller.update(model.update());
-controller.destroy(model.destroy());
+controller.index(fruit.index());
+controller.new(fruit.new());
+controller.create(fruit.create());
+controller.show(fruit.show());
+controller.edit(fruit.edit());
+controller.update(fruit.update());
+controller.destroy(fruit.destroy());
 
 module.exports = controller;

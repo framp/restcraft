@@ -1,20 +1,21 @@
 var restcraft = require('../..');
-var model = require('../models/complex-toy').restcraft.middleware;
-var fruitModel = require('../models/fruit').restcraft.middleware;
-
-var fruitController = require('./fruit');
+var complexToy = require('../models/complex-toy').restcraft.middleware;
+var fruit = require('../models/fruit').restcraft.middleware;
 
 var controller = restcraft('complex-toy', {
-  parent: fruitController
+  parent: require('./fruit')
+, render: function(req, res, next){
+    res.send(res.restcraft);
+  }
 });
 
-controller.index(fruitModel.show());
-controller.index(model.index());
-controller.new(model.new());
-controller.create(model.create());
-controller.show(model.show());
-controller.edit(model.edit());
-controller.update(model.update());
-controller.destroy(model.destroy());
+controller.index(fruit.show());
+controller.index(complexToy.index());
+controller.new(complexToy.new());
+controller.create(complexToy.create());
+controller.show(complexToy.show());
+controller.edit(complexToy.edit());
+controller.update(complexToy.update());
+controller.destroy(complexToy.destroy());
 
 module.exports = controller;
