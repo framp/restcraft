@@ -5,6 +5,12 @@
   "dependencies": {
     "mongoose": "^3.8.8",
     "express": "^4.0.0",
-    "consolidate": "^0.10.0"
+    "consolidate": "^0.10.0",
+    "debug": "^0.8.0",
+    "dustjs-linkedin": "^2.3.4",
+    "cookie-parser": "^1.0.1",
+    "morgan": "^1.0.0",
+    "body-parser": "^1.0.2",
+    "body-disposal": "0.0.1"
   }
 }
