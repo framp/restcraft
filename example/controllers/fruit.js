@@ -10,7 +10,7 @@ var controller = restcraft('fruit', {
 controller.index(fruit.index());
 controller.new(fruit.new());
 controller.create(fruit.create());
-controller.show(fruit.show());
+controller.show(fruit.show({idField: 'name'}));
 controller.edit(fruit.edit());
 controller.update(fruit.update());
 controller.destroy(fruit.destroy());

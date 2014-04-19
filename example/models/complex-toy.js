@@ -1,4 +1,4 @@
-var restcraft = require('../..').resource;
+var restcraft = require('../..');
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema, ObjectId = Schema.ObjectId;
 
@@ -9,4 +9,4 @@ var schema = new Schema({
 });
 
 module.exports = mongoose.model('complex-toy', schema);
-restcraft(module.exports, 'mongoose');
+restcraft.resource(module.exports, 'mongoose');

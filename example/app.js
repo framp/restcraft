@@ -24,9 +24,7 @@ app.use(bodyParser.urlencoded());
 app.use(cookieParser());
 app.use(bodyDisposal());
 
-app.get('/', function(req, res){
-  res.send('hello world');
-});
+require('./controllers/static').route()(app);
 require('./controllers/fruit').route()(app);
 require('./controllers/complex-toy').route()(app);
 
