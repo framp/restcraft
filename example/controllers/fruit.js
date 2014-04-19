@@ -7,7 +7,14 @@ var controller = restcraft('fruit', {
   }
 });
 
-controller.index(fruit.index());
+controller.index(fruit.index({
+  hooks: {
+    preExecution: function($, query, callback){
+      query.skip(1);
+      callback(null, $, query);
+    }
+  }
+}));
 controller.new(fruit.new());
 controller.create(fruit.create());
 controller.show(fruit.show({idField: 'name'}));
