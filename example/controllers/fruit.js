@@ -6,7 +6,10 @@ var controller = restcraft('fruit', {
     res.send(res.restcraft);
   }
 });
-
+controller.add('*', function(req, res, next){
+  console.log("FOAR EVERYWUN FRUM BOXXY");
+  next();
+})
 controller.index(fruit.index({
   hooks: {
     preExecution: function($, query, callback){
