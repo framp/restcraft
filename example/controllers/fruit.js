@@ -17,6 +17,13 @@ controller.index(fruit.index({
       callback(null, $, query);
     }
   }
+},{
+  hooks: {
+    preExecution: function($, query, callback){
+      query.where('name', 'Apple');
+      callback(null, $, query);
+    }
+  }
 }));
 controller.new(fruit.new());
 controller.create(fruit.create());
