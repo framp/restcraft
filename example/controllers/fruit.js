@@ -11,18 +11,14 @@ controller.add('*', function(req, res, next){
   next();
 })
 controller.index(fruit.index({
-  hooks: {
-    preExecution: function($, query, callback){
-      query.skip(1);
-      callback(null, $, query);
-    }
+  preExecution: function($, query, callback){
+    query.skip(1);
+    callback(null, $, query);
   }
 },{
-  hooks: {
-    preExecution: function($, query, callback){
-      query.where('name', 'Apple');
-      callback(null, $, query);
-    }
+  preExecution: function($, query, callback){
+    query.where('name', 'Apple');
+    callback(null, $, query);
   }
 }));
 controller.new(fruit.new());
