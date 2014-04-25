@@ -3,6 +3,10 @@ var fruit = require('../models/fruit');
 
 var controller = $.controller('fruit', {
   render: function(req, res, next){
+    res.restcraft.$.res = undefined;
+    res.restcraft.$.req = undefined;
+    res.restcraft.$.model = undefined;
+    console.log(res.restcraft);
     res.send(res.restcraft);
   }
 });

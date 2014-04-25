@@ -5,6 +5,9 @@ var fruit = require('../models/fruit');
 var controller = $.controller('complex-toy', {
   parent: require('./fruit')
 , render: function(req, res, next){
+    res.restcraft.$.res = undefined;
+    res.restcraft.$.req = undefined;
+    res.restcraft.$.model = undefined;
     res.send(res.restcraft);
   }
 });
