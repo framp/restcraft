@@ -1,6 +1,6 @@
-var restcraft = require('../..');
+var $ = require('../..');
 
-var controller = restcraft('', {
+var controller = $.controller('', {
   render: function(req, res, next){
     res.send(res.restcraft);
   },

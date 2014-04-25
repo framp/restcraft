@@ -8,7 +8,6 @@ var bodyDisposal = require('body-disposal');
 var consolidate = require('consolidate');
 
 var mongoose = require('mongoose');
-
 mongoose.connect('mongodb://localhost/restcraft-example');
 mongoose.set('debug', true);
 

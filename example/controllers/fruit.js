@@ -1,7 +1,7 @@
-var restcraft = require('../..');
-var fruit = require('../models/fruit').restcraft.middleware;
+var $ = require('../..');
+var fruit = require('../models/fruit');
 
-var controller = restcraft('fruit', {
+var controller = $.controller('fruit', {
   render: function(req, res, next){
     res.send(res.restcraft);
   }
@@ -10,22 +10,22 @@ controller.add('*', function(req, res, next){
   console.log("FOAR EVERYWUN FRUM BOXXY");
   next();
 })
-controller.index(fruit.index({
+controller.index($(fruit).routeIndex({
   preExecution: function($, query, callback){
     query.skip(1);
-    callback(null, $, query);
+    callback();
   }
 },{
   preExecution: function($, query, callback){
     query.where('name', 'Apple');
-    callback(null, $, query);
+    callback();
   }
 }));
-controller.new(fruit.new());
-controller.create(fruit.create());
-controller.show(fruit.show({idField: 'name'}));
-controller.edit(fruit.edit());
-controller.update(fruit.update());
-controller.destroy(fruit.destroy());
+controller.new($(fruit).routeNew());
+controller.create($(fruit).routeCreate());
+controller.show($(fruit).routeShow({idField: 'name'}));
+controller.edit($(fruit).routeEdit());
+controller.update($(fruit).routeUpdate());
+controller.destroy($(fruit).routeDestroy());
 
 module.exports = controller;
