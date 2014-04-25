@@ -15,14 +15,15 @@ controller.add('*', function(req, res, next){
   next();
 })
 controller.index($(fruit).routeIndex({
-  preExecution: function($, query, callback){
+  preExecution: function(query, next){
+    console.log(this);
     query.skip(1);
-    callback();
+    next();
   }
 },{
-  preExecution: function($, query, callback){
+  preExecution: function(query, next){
     query.where('name', 'Apple');
-    callback();
+    next();
   }
 }));
 controller.new($(fruit).routeNew());
