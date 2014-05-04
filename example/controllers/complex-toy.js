@@ -21,4 +21,4 @@ controller.edit($(complexToy).routeEdit());
 controller.update($(complexToy).routeUpdate());
 controller.destroy($(complexToy).routeDestroy());
 
-module.exports = controller.route();
+module.exports = controller;

@@ -23,9 +23,9 @@ app.use(bodyParser.urlencoded());
 app.use(cookieParser());
 app.use(bodyDisposal());
 
-require('./controllers/static')(app);
-require('./controllers/fruit')(app);
-require('./controllers/complex-toy')(app);
+require('./controllers/static').route()(app);
+require('./controllers/fruit').route()(app);
+require('./controllers/complex-toy').route()(app);
 
 
 app.use(function(req, res, next){
