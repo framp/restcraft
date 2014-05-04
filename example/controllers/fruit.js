@@ -33,4 +33,4 @@ controller.edit($(fruit).routeEdit());
 controller.update($(fruit).routeUpdate());
 controller.destroy($(fruit).routeDestroy());
 
-module.exports = controller;
+module.exports = controller.route();

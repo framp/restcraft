@@ -11,4 +11,4 @@ controller.show(function(req, res, next){
   next();
 });
 
-module.exports = controller;
+module.exports = controller.route();
