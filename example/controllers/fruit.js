@@ -10,6 +10,7 @@ var controller = $.controller('fruit', {
     res.send(res.restcraft);
   }
 });
+console.log(controller);
 controller.add('*', function(req, res, next){
   console.log("FOAR EVERYWUN FRUM BOXXY");
   next();
