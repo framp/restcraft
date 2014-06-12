@@ -13,7 +13,7 @@ var controller = $.controller('complexToy', {
 });
 
 controller.index($(fruit).routeShow());
-controller.index($(complexToy).routeIndex());
+controller.index($(complexToy).routeIndex({ name: "toy"}));
 controller.new($(complexToy).routeNew());
 controller.create($(complexToy).routeCreate());
 controller.show($(complexToy).routeShow());
