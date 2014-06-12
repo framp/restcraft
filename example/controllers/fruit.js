@@ -1,7 +1,8 @@
 var $ = require('../..');
 var fruit = require('../models/fruit');
 
-var controller = $.controller('fruit', {
+var name = 'fruit';
+var controller = $.controller(name, {
   render: function(req, res, next){
     res.restcraft.$.res = undefined;
     res.restcraft.$.req = undefined;

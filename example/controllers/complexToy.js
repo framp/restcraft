@@ -2,7 +2,8 @@ var $ = require('../..');
 var complexToy = require('../models/complexToy');
 var fruit = require('../models/fruit');
 
-var controller = $.controller('complexToy', {
+var name = 'complexToy';
+var controller = $.controller(name, {
   parent: require('./fruit')
 , render: function(req, res, next){
     res.restcraft.$.res = undefined;
