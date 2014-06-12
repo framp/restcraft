@@ -1,7 +1,8 @@
 {
   "name": "restcraft",
   "author": "Federico Rampazzo <frampone@gmail.com>",
-  "version": "0.0.8",
+  "repository": "https://github.com/framp/restcraft",
+  "version": "0.0.9",
   "dependencies": {
     "async": "^0.9.0",
     "lodash": "^2.4.1",
