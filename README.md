@@ -119,11 +119,11 @@ $ accepts the following options:
     data: {}                           an object of data which will get used to build
     id[name]: String                   an string used to retrieve the element with this id
     idField: String                    a string used to define which property should be the id (default to _id)
-    limit[name]: Number                a number indicating how many elements of name are returned
-    skip[name]: Number                 a number indicating how many elements of name are skipped
-    sort[name]: String                 string indicating by which field the elements of name will be sorted
-    items[name]: Number                a number indicating how many elements a page of name contains
-    page[name]: Number                 a number indicating which page of name contains
+    limit: Number                      a number indicating how many elements of name are returned
+    skip: Number                       a number indicating how many elements of name are skipped
+    sort: String                       string indicating by which field the elements of name will be sorted
+    items: Number                      a number indicating how many elements a page of name contains
+    page: Number                       a number indicating which page of name contains
     admittedFields: [String]           an array of strings indicating the keys which will be returned to the user
     populateFields: Boolean, [String]  false by default, populate fields when reaching object references
                                        it could be an array of strings of the keys which will be populated
@@ -157,11 +157,11 @@ When calling route* functions the option used to call the function will be popul
 
  - `req.params` is mapped to `$.id`
  - `req.body` is mapped to `$.data`
- - `req.query.resourceNameLimit` is mapped to `$.limit[resourceName]`
- - `req.query.resourceNameSkip` is mapped to `$.skip[resourceName]`
- - `req.query.resourceNameSort` is mapped to `$.sort[resourceName]`
- - `req.query.resourceNameItems` is mapped to `$.items[resourceName]`
- - `req.query.resourceNamePages` is mapped to `$.pages[resourceName]`
+ - `req.query.resourceNameLimit` is mapped to `$.limit`
+ - `req.query.resourceNameSkip` is mapped to `$.skip`
+ - `req.query.resourceNameSort` is mapped to `$.sort`
+ - `req.query.resourceNameItems` is mapped to `$.items`
+ - `req.query.resourceNamePages` is mapped to `$.pages`
  
 As a side note, I suggest using something like [body-disposal](https://github.com/framp/body-disposal) to handle the usual form data annoyances.
 
