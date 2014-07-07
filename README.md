@@ -122,7 +122,9 @@ $ accepts the following options:
     limit: Number                      a number indicating how many elements of name are returned
     skip: Number                       a number indicating how many elements of name are skipped
     sort: String                       string indicating by which fields (space separated) the elements of name will be sorted
-    sort: String                       string indicating if the sort fields will be sorted asc or desc 
+    order: String                      string indicating if the sort fields will be sorted asc or desc 
+    filter: String                     string indicating the field on which to filter (using search)
+    search: String                     string which should be used to filter
     items: Number                      a number indicating how many elements a page of name contains
     page: Number                       a number indicating which page of name contains
     admittedFields: [String]           an array of strings indicating the keys which will be returned to the user
