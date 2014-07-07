@@ -121,7 +121,8 @@ $ accepts the following options:
     idField: String                    a string used to define which property should be the id (default to _id)
     limit: Number                      a number indicating how many elements of name are returned
     skip: Number                       a number indicating how many elements of name are skipped
-    sort: String                       string indicating by which field the elements of name will be sorted
+    sort: String                       string indicating by which fields (space separated) the elements of name will be sorted
+    sort: String                       string indicating if the sort fields will be sorted asc or desc 
     items: Number                      a number indicating how many elements a page of name contains
     page: Number                       a number indicating which page of name contains
     admittedFields: [String]           an array of strings indicating the keys which will be returned to the user
