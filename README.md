@@ -162,6 +162,7 @@ When calling route* functions the option used to call the function will be popul
  - `req.query.resourceNameLimit` is mapped to `$.limit`
  - `req.query.resourceNameSkip` is mapped to `$.skip`
  - `req.query.resourceNameSort` is mapped to `$.sort`
+ - `req.query.resourceNameFilter` is mapped to `$.filter`
  - `req.query.resourceNameItems` is mapped to `$.items`
  - `req.query.resourceNamePages` is mapped to `$.pages`
  
