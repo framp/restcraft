@@ -122,6 +122,7 @@ $ accepts the following options:
     limit: Number                      a number indicating how many elements of name are returned
     skip: Number                       a number indicating how many elements of name are skipped
     sort: String                       string or object indicating by which fields the elements of name will be sorted
+    select: String                     string or object indicating which fields should be selected
     filter: String                     string indicating the field on which to filter (using search)
     search: String                     string which should be used to filter
     items: Number                      a number indicating how many elements a page of name contains
@@ -162,6 +163,7 @@ When calling route* functions the option used to call the function will be popul
  - `req.query.resourceNameLimit` is mapped to `$.limit`
  - `req.query.resourceNameSkip` is mapped to `$.skip`
  - `req.query.resourceNameSort` is mapped to `$.sort`
+ - `req.query.resourceNameSelect` is mapped to `$.select`
  - `req.query.resourceNameFilter` is mapped to `$.filter`
  - `req.query.resourceNameItems` is mapped to `$.items`
  - `req.query.resourceNamePages` is mapped to `$.pages`
