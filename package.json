@@ -2,11 +2,11 @@
   "name": "restcraft",
   "author": "Federico Rampazzo <frampone@gmail.com>",
   "repository": "https://github.com/framp/restcraft",
-  "version": "0.0.49",
+  "version": "0.0.50",
   "dependencies": {
     "async": "^0.9.0",
-    "debug": "^1.0.2",
-    "lodash": "^2.4.1",
-    "pluralize": "0.0.10"
+    "debug": "^2.1.3",
+    "lodash": "^3.5.0",
+    "pluralize": "1.1.2"
   }
 }
